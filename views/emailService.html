@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form class="col s4" action="emailServiceGET" >
+        <div class="container">
+            <div class="input-field col s8">
+                <input id="id" name="email" type="text" class="validate" >
+                <label for="id">{{translate.t('ایمیل')}}</label>
+                <span class="helper-text" data-error="wrong" data-success="right">لطفا یک ایمیل وارد کنید</span>
+            </div>
+            <br>                 
+            <button class="btn waves-effect waves-light" type="submit" value="submit" name="submit">ارسال ایمیل</button>
+        </div>
+    </form>
+
+{% endblock %}

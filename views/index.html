@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %} 
+        <div class="container">
+            {{11|perssonById(id = P_ID)}}
+            <h2>lang <a href="/?language={{LANG}}">{{LANG}}</a></h2>
+            <h4>add persson</h4>
+            <form class="col s4" action="/add">
+                <div class="container">
+                    <div class="input-field col s8">
+                        <input id="name" name="name" type="text" class="validate">
+                        <label for="name">{{translate.t('name')}} : </label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                    </div>
+                    <div class="input-field col s8">
+                        <input id="last-name" name="lastName" type="text" class="validate">
+                        <label for="last-name">{{translate.t('lastname')}}</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                    </div>
+                    <div class="input-field col s8">
+                        <input id="age" name="age" type="number" class="age">
+                        <label for="age">{{translate.t('age')}}</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                    </div>   
+                    <br>                 
+                    <button class="btn waves-effect waves-light" type="submit" value="submit" name="submit">Submit</button>
+                </div>
+            </form>
+            <br>
+            <form class="col s4" action="perssonById">
+                <div class="container">
+                    <div class="input-field col s8">
+                        <input id="id" name="id" type="text" class="validate">
+                        <label for="id">{{translate.t('searchById')}}</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                    </div>
+                    <br>                 
+                    <button class="btn waves-effect waves-light" type="submit" value="submit" name="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+{% endblock %}
